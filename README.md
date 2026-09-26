@@ -47,7 +47,6 @@ Get a free Gemini API key at https://aistudio.google.com/app/apikey
 - "What's the average order value for delivered orders?"
 - "Show monthly revenue trend for 2024."
 
-## Architecture notes (for the interview)
 
 **Schema-aware prompting.** The model is never asked to guess table or
 column names — the exact schema is injected into every prompt, which is
@@ -65,11 +64,6 @@ generative model's output at face value, verify it structurally.
 connects as would only have `SELECT` grants at the MySQL level too —
 defense in depth, not just app-level filtering.
 
-## Possible extensions (mention if asked "what would you add?")
 
-- Confidence/explanation step: have the model justify which tables/joins
-  it chose, so a human can sanity-check before trusting the answer
-- Query result caching for repeated questions
-- A small Flask/FastAPI wrapper + simple web UI instead of CLI
-- Expanding the safety layer with `EXPLAIN`-based cost checks to catch
-  runaway queries before execution
+
+
